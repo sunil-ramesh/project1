@@ -1,0 +1,19 @@
+{
+  "name": "book",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "supervisor ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.5",
+    "express": "*",
+    "method-override": "^2.3.7",
+    "mongoose": "*",
+    "multer": "^1.2.1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!-- <script type="text/javascript" src="./app.js"></script>  -->
+</head>
+<body>
+<!-- <form action="/api/genre1" method="post"> -->
+<input type="text" value="<%=edit.name%>" id="demo">
+<button type="submit" id="update">edit</button>
+
+<script>
+	var update = document.getElementById('update');
+   
+	update.addEventListener('click', function () {
+	var data = document.getElementById('demo').value;
+  alert("hi");
+  console.log(data);
+  
+  fetch('/genres/<%=edit._id%>',{
+    method : 'put',
+    headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify({
+    'name': data
+    
+  })
+  })
+  // Send PUT Request here
+})
+</script>
+
+
+</form>
+</body>
+</html>
